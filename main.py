@@ -218,7 +218,7 @@ label='Accuracy')
  print(f'Test Accuracy: {accuracy:.2f}%')
  # Display predictions for a few images
  examples = iter(test_loader)         
-data
+
  images,labels = next(examples)                               
 # Create an iterator for the test first batch of images and labels
  #images = images.flatten(start_dim=1)                             # 
@@ -233,9 +233,9 @@ data
 # Get the 
 # Display a few images with their predictions and true labels
  for i in range(6):
- plt.subplot(2, 3, i+1)
- plt.imshow(images[i].squeeze(), cmap='gray')  # Show the image added squueze instead of images[i][0]
- plt.title(f'Actual: {labels[i].item()}, Predicted: 
+plt.subplot(2, 3, i+1)
+plt.imshow(images[i].squeeze(), cmap='gray')  # Show the image added squueze instead of images[i][0]
+plt.title(f'Actual: {labels[i].item()}, Predicted: 
 {predictions[i].item()}')
- plt.axis('off')
- plt.show()
+plt.axis('off')
+plt.show()
